@@ -76,24 +76,27 @@
         // 2. Muestra por consola la descripción de este artículo
         console.log(document.querySelector("#description").textContent);
         // 3. Muestra el precio del producto por consola
-
+        console.log(document.querySelector(".price").textContent);
         // 3. Muestra el precio del producto por consola sin el símbolo del dólar
-
+        console.log(document.querySelector(".price").textContent.substring(1));
         // 4. COMPLICADO. Muestra por consola el valor del estilo en línea 'width' del tag <img>
-
+        console.log(document.querySelector("img").style.width);
         /* Modificar estilos CSS */
 
         // 6. Cambiar el color del título h2 a verde (green)
-
+        document.querySelector("h2").style.color = 'green';
         // 7. Aumentar el tamaño de fuente del nombre del producto (h1) a 28px
-
+        document.querySelector("h1").style.fontSize = "28px";
         // 8. Cambia el color de la letra del botón "Add To Cart" al color #002147
-
+        document.querySelector("button").style.color = "#002147"
         // 9. Cambiar el fondo del botón a color mango
-
+        document.querySelector("button").style.backgroundColor = "#f7b700";
         // 10. Utiliza el método addClass para añdir la clase CSS "fancy-text" a la descripción del producto
-
+        document.querySelector("#description").classList.add("fancy-text");
         // 5. DIFÍCIL: Aplica un 21% (de incremento) al precio de este producto y muéstralo por consola
+        let price = document.querySelector(".price").textContent;
+        let result = parseFloat(price.substring(1)) * 1.21;
+        console.log(result);
     
     </script>
 
